@@ -15,6 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Data", "Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common.DataModels", "Application.Common.DataModels\Application.Common.DataModels.csproj", "{6683A33A-47AA-4595-A6F6-255FF0754174}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A464D2A-58C8-4520-9336-6F91E1384683}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\deployments\Azure_CI-CD\appsettings.Development.json = ..\..\..\..\deployments\Azure_CI-CD\appsettings.Development.json
+		..\..\..\..\deployments\Azure_CI-CD\appsettings.json = ..\..\..\..\deployments\Azure_CI-CD\appsettings.json
+		..\..\..\..\deployments\Azure_CI-CD\host.json = ..\..\..\..\deployments\Azure_CI-CD\host.json
+		..\..\..\..\deployments\Azure_CI-CD\local.settings.json = ..\..\..\..\deployments\Azure_CI-CD\local.settings.json
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.deps.json = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.deps.json
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.dll = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.dll
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.pdb = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.pdb
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.PrecompiledViews.dll = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.PrecompiledViews.dll
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.PrecompiledViews.pdb = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.PrecompiledViews.pdb
+		..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.runtimeconfig.json = ..\..\..\..\deployments\Azure_CI-CD\OpenHouse.API.runtimeconfig.json
+		..\..\..\..\deployments\Azure_CI-CD\web.config = ..\..\..\..\deployments\Azure_CI-CD\web.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
