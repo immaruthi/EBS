@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Application.Common.DataModels
 {
-    public class ProductModelData
+    public enum ItemMaster
     {
-        public ProductMaster ProductType { get; set; }
-
-        public List<ItemModelData> ProductItems { get; set; }
+        B4102151 = 1,
+        N4101070 = 2,
+        N4101130 = 3
     }
 }
