@@ -8,5 +8,6 @@ namespace Application.Common.DataModels
 {
     public class ProductModelData
     {
+        // ToDo : Please do add the product properties here
     }
 }
