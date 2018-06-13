@@ -1,6 +1,7 @@
 def workspace;
 node {
    echo 'Process Start'
+   echo 'Sanity Test'
    stage('Checkout')
    {
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '182d991f-95d3-4946-a822-79b4bc362381', url: 'https://github.com/immaruthi/EBS.git']]])
