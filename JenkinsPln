@@ -1,0 +1,25 @@
+def workspace;
+node {
+   echo 'Process Start'
+   stage('Checkout')
+   {
+       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '182d991f-95d3-4946-a822-79b4bc362381', url: 'https://github.com/immaruthi/EBS.git']]])
+       workspace=pwd()
+   }
+   stage('Static Code Analysis')
+   {
+       echo 'Static Code Analysis Done'
+   }
+   stage('Build')
+   {
+       echo 'Build the code is done'
+   }
+   stage('Unit Testing')
+   {
+       echo 'Unit Testing is done'
+   }
+   stage('Delivery')
+   {
+       echo 'Delivery the code is done'
+   }
+}
