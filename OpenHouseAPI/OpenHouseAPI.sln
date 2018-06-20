@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Services", "Application.Services", "{22D960E0-A9B2-4458-BD2E-92E7226AA27B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenHouse.API", "OpenHouse.API\OpenHouse.API.csproj", "{BDDFF0D9-7521-48B5-A8D3-2CD3464AF3BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenHouse.API", "OpenHouse.API\OpenHouse.API.csproj", "{BDDFF0D9-7521-48B5-A8D3-2CD3464AF3BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Common", "Application.Common", "{8D6AD1C2-EF73-415A-837F-7271C2D13431}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Data", "Application.Data", "{887D5E7B-84E2-42EB-A6CE-7DC469D61571}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common.DataModels", "Application.Common.DataModels\Application.Common.DataModels.csproj", "{6683A33A-47AA-4595-A6F6-255FF0754174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application.Test", "Application.Test", "{FC2DAA12-9D51-4E90-850E-3246172972CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Unit.EBSTest", "Application.Unit.EBSTest\Application.Unit.EBSTest.csproj", "{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{6683A33A-47AA-4595-A6F6-255FF0754174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6683A33A-47AA-4595-A6F6-255FF0754174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6683A33A-47AA-4595-A6F6-255FF0754174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{BDDFF0D9-7521-48B5-A8D3-2CD3464AF3BF} = {22D960E0-A9B2-4458-BD2E-92E7226AA27B}
 		{20C6B8F4-6A6E-44D8-9B84-AE7BFEC09C15} = {8D6AD1C2-EF73-415A-837F-7271C2D13431}
 		{6683A33A-47AA-4595-A6F6-255FF0754174} = {887D5E7B-84E2-42EB-A6CE-7DC469D61571}
+		{CA558BB5-3B61-4983-9EAD-8C9050E6CDF5} = {FC2DAA12-9D51-4E90-850E-3246172972CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4200D83A-C992-4589-9DD3-EF77AA80E88E}
