@@ -14,5 +14,14 @@ namespace Application.Unit.EBSTest
             int c = a + b;
             Assert.AreEqual(c, 30, "Test case failed");
         }
+
+        [TestMethod]
+        public void TestIndex2()
+        {
+            int a = 10;
+            int b = 20;
+            int c = a + b;
+            Assert.AreEqual(c, 30, "Test case failed");
+        }
     }
 }
