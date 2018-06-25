@@ -1,0 +1,14 @@
+node
+{
+    stage('Checkout code')
+    properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
+     checkout([$class: 'GitSCM', branches: [[name: '*/stagging']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '182d991f-95d3-4946-a822-79b4bc362381', url: 'https://github.com/immaruthi/EBS.git']]])
+    stage('Restor Nuget')
+     bat '"C:\\Program Files (x86)\\Nuget_Restore\\nuget.exe" restore OpenHouseAPI\\OpenHouseAPI.sln'
+    stage('Build')
+    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"; dotnet build --configuration Debug;dotnet build --configuration Release;dotnet msbuild /p:Configuration=Debug /p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=D:\\EBS\\Artifacts\\Output2.0.0.1.zip'
+    stage('unit test')
+    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI\\Application.TestBase";dotnet test'
+    stage('Archive')
+          archive 'OpenHouseAPI/bin/Release/**/*.ZIP'
+}
