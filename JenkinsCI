@@ -10,5 +10,5 @@ node
     stage('unit test')
     powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI\\Application.TestBase";dotnet test'
     stage('Publish to Nexus')
-          nexusArtifactUploader artifacts: [[artifactId: 'API2', classifier: 'release', file: 'D:\\EBS\\Artifacts\\Output2.0.0.1.zip', type: 'ZIP']], credentialsId: 'nexusID', groupId: 'nexusArtifacts', nexusUrl: '10.150.178.31:8081/nexus/content/repositories/releases/', nexusVersion: 'nexus2', protocol: 'http', repository: 'Releases', version: '2.0.0.1'
+          nexusArtifactUploader artifacts: [[artifactId: 'API2', classifier: 'release', file: 'D:\\EBS\\Artifacts\\Output2.0.0.1.zip', type: 'ZIP']], credentialsId: 'nexusID', groupId: 'nexusArtifacts', nexusUrl: '10.150.178.31:8081/nexus/content/repositories/releases/', nexusVersion: 'nexus2', protocol: 'http', repository: 'Releases', version: '2.0.0.2'
 }
