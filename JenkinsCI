@@ -8,9 +8,9 @@ node
      stage('SonarQube Integration Step 1')
     bat 'cd "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"'
     stage('SonarQube Integration Step 2')
-    bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample1" /n:"sample1" /v:"1.0"'
+    bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample2" /n:"sample2" /v:"1.0"'
     stage('SonarQube Integration Step 3')
-    bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\bin\\MSBuild.exe" /t:Rebuild'
+    bat 'dotnet build'
     stage('SonarQube Integration Step 4')
     bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe end'
     stage('Build and Prepare Artifacts')
