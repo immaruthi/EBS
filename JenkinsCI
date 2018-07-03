@@ -1,0 +1,16 @@
+node
+{
+    stage('Checkout code')
+    properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('* * * * *')])])
+     checkout([$class: 'GitSCM', branches: [[name: '*/stagging']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '182d991f-95d3-4946-a822-79b4bc362381', url: 'https://github.com/immaruthi/EBS.git']]])
+    stage('Restor Nuget')
+     bat '"C:\\Program Files (x86)\\Nuget_Restore\\nuget.exe" restore OpenHouseAPI\\OpenHouseAPI.sln'
+     stage('SonarQube Integration')
+    bat 'cd "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI" & D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample1" /n:"sample1" /v:"1.0" & "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\bin\\MSBuild.exe" /t:Rebuild  & D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe end'
+    stage('Build and Prepare Artifacts')
+    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"; dotnet build --configuration Debug;dotnet build --configuration Release;dotnet msbuild /p:Configuration=Debug /p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=D:\\EBS\\Artifacts\\Output2.0.0.1.zip'
+    stage('unit test')
+    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI\\Application.TestBase";dotnet test'
+    stage('Publish to Nexus')
+          nexusArtifactUploader artifacts: [[artifactId: 'API2', classifier: 'release', file: 'D:\\EBS\\Artifacts\\Output2.0.0.1.zip', type: 'ZIP']], credentialsId: 'nexusID', groupId: 'nexusArtifacts', nexusUrl: '10.150.178.48:8081/nexus/content/repositories/releases/', nexusVersion: 'nexus2', protocol: 'http', repository: 'Releases', version: '2.0.0.2'
+}
