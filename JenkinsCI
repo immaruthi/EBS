@@ -6,7 +6,7 @@ node
     stage('Restor Nuget')
      bat '"C:\\Program Files (x86)\\Nuget_Restore\\nuget.exe" restore OpenHouseAPI\\OpenHouseAPI.sln'
      stage('SonarQube Integration')
-    bat 'cd "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI" & D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample1" /n:"sample1" /v:"1.0" & "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\bin\\MSBuild.exe" /t:Rebuild  & D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe end'
+    bat 'cd "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI" && D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample1" /n:"sample1" /v:"1.0" && "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\bin\\MSBuild.exe" /t:Rebuild && D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe end'
     stage('Build and Prepare Artifacts')
     powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"; dotnet build --configuration Debug;dotnet build --configuration Release;dotnet msbuild /p:Configuration=Debug /p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=D:\\EBS\\Artifacts\\Output2.0.0.1.zip'
     stage('unit test')
