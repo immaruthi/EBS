@@ -6,9 +6,7 @@ node
     stage('Restor Nuget')
      bat '"C:\\Program Files (x86)\\Nuget_Restore\\nuget.exe" restore OpenHouseAPI\\OpenHouseAPI.sln'
      stage('SonarQube Integration Step 1')
-    bat 'cd "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"'
-    stage('openHouse')
-    bat 'cd OpenHouseAPI'
+    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"'
     stage('SonarQube Integration Step 2')
     bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe /k:"sample2" /n:"sample2" /v:"1.0"'
     stage('SonarQube Integration Step 3')
