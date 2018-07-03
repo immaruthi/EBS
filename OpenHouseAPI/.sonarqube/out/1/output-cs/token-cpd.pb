@@ -1,30 +1,143 @@
-…
-=D:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\AppBuilders.cs
-	namespace 	
-Common
- 
-. 
-Builders 
-{ 
-public		 
-
-class		 
-AppBuilders		 
-{
+í
+LD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\ProductServices.cs
+	namespace 	
+Application
+ 
+. 
+ProductService $
+{		 
+public
 
- 
-} 
-} ô
-ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.cs
+ 
+
+class
+
+ 
+ProductServices
+
+  
+{ 
+public 
+static 
+List 
+< 
+ProductModelData +
+>+ ,
+GetAllProducts- ;
+(; <
+)< =
+{ 	
+var "
+getAllProductsResponse &
+=' (
+new) ,
+List- 1
+<1 2
+ProductModelData2 B
+>B C
+(C D
+)D E
+;E F
+var 
+itemModelData 
+= 
+new  #
+List$ (
+<( )
+ItemModelData) 6
+>6 7
+(7 8
+)8 9
+;9 :
+itemModelData 
+. 
+Add 
+( 
+new !
+ItemModelData" /
+(/ 0
+)0 1
+{ 
+ItemDescription 
+=  !
+$str" 9
+,9 :
+	ItemPrice 
+= 
+$num !
+,! "
+ItemType 
+= 
+
+ItemMaster %
+.% &
+B4102151& .
+} 
+) 
+; 
+itemModelData 
+. 
+Add 
+( 
+new !
+ItemModelData" /
+(/ 0
+)0 1
+{ 
+ItemDescription 
+=  !
+$str" 8
+,8 9
+	ItemPrice 
+= 
+$num !
+,! "
+ItemType 
+= 
+
+ItemMaster %
+.% &
+B4102151& .
+} 
+) 
+; "
+getAllProductsResponse   "
+.  " #
+Add  # &
+(  & '
+new  ' *
+ProductModelData  + ;
+(  ; <
+)  < =
+{!! 
+ProductItems"" 
+="" 
+itemModelData"" ,
+,"", -
+ProductType## 
+=## 
+ProductMaster## +
+.##+ ,
+Herbal##, 2
+}$$ 
+)$$ 
+;$$ 
+return&& "
+getAllProductsResponse&& )
+;&&) *
+}'' 	
+}(( 
+})) ÿ
+TD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\Properties\AssemblyInfo.cs
 [ 
 assembly 	
 :	 
 
 AssemblyTitle 
 ( 
-$str *
-)* +
-]+ ,
+$str 5
+)5 6
+]6 7
 [		 
 assembly		 	
 :			 
@@ -74,9 +187,9 @@ ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.cs
 
 AssemblyProduct 
 ( 
-$str ,
-), -
-]- .
+$str 7
+)7 8
+]8 9
 [ 
 assembly 	
 :	 

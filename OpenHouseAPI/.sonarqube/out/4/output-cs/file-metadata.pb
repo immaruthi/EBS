@@ -1,6 +1,4 @@
-L
-JD:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Controllers\HomeController.cs9
-7D:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Program.cs9
-7D:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Startup.csU
-QC:\Users\mpall3\AppData\Local\Temp\.NETCoreApp,Version=v2.0.AssemblyAttributes.csf
-bD:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\obj\Debug\netcoreapp2.0\OpenHouse.API.AssemblyInfo.cs
+?
+=D:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\AppBuilders.csK
+ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.csY
+UC:\Users\mpall3\AppData\Local\Temp\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs

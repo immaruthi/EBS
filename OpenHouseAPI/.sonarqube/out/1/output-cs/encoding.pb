@@ -1,3 +1,3 @@
-F
-=D:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\AppBuilders.csutf-8R
-ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.csutf-8
+U
+LD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\ProductServices.csutf-8]
+TD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\Properties\AssemblyInfo.csutf-8

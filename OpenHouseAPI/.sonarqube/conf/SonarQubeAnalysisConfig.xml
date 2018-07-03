@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+<AnalysisConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
   <SonarConfigDir>D:\GitHub\EBS\EBS\OpenHouseAPI\.sonarqube\conf</SonarConfigDir>
   <SonarOutputDir>D:\GitHub\EBS\EBS\OpenHouseAPI\.sonarqube\out</SonarOutputDir>
   <SonarBinDir>D:\GitHub\EBS\EBS\OpenHouseAPI\.sonarqube\bin</SonarBinDir>
@@ -7,11 +7,13 @@
   <HasBeginStepCommandLineCredentials>false</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>7.2.0.13530</SonarQubeVersion>
-  <SonarProjectKey>blm</SonarProjectKey>
+  <SonarProjectKey>sample</SonarProjectKey>
+  <SonarProjectVersion>1.0</SonarProjectVersion>
+  <SonarProjectName>sample</SonarProjectName>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
-    <ConfigSetting Id="settings.file.path" Value="D:\Softwares\SonarVersions\SonarQube.Analysis.xml" />
+    <ConfigSetting Id="settings.file.path" Value="D:\Softwares\sonar-build_4.6\SonarQube.Analysis.xml" />
   </AdditionalConfig>
   <ServerSettings>
     <Property Name="sonaranalyzer-cs.nuget.packageVersion">7.2.0.5463</Property>
@@ -100,7 +102,7 @@
     <Property Name="sonar.tsql.file.suffixes">.tsql</Property>
     <Property Name="sonar.cpp.std">c++11</Property>
     <Property Name="sonar.core.id">AWQ7DIk5lewt8rHrmQu2</Property>
-    <Property Name="sonar.core.startTime">7/3/2018 11:29:26 AM</Property>
+    <Property Name="sonar.core.startTime">7/3/2018 2:52:13 PM</Property>
   </ServerSettings>
   <LocalSettings />
   <AnalyzersSettings>

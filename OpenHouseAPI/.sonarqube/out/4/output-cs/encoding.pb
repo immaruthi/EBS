@@ -1,4 +1,3 @@
-S
-JD:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Controllers\HomeController.csutf-8@
-7D:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Program.csutf-8@
-7D:\GitHub\EBS\EBS\OpenHouseAPI\OpenHouse.API\Startup.csutf-8
+F
+=D:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\AppBuilders.csutf-8R
+ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.csutf-8

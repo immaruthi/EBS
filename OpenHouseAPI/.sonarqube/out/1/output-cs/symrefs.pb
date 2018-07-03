@@ -1,5 +1,11 @@
-K
-=D:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\AppBuilders.cs
+°
+LD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\ProductServices.cs
 
-		 K
-ID:\GitHub\EBS\EBS\OpenHouseAPI\Common.Builders\Properties\AssemblyInfo.cs
+
+
+  
+
+- ;
+ &   "&& )(
+   "" ,V
+TD:\GitHub\EBS\EBS\OpenHouseAPI\Application.ProductService\Properties\AssemblyInfo.cs
