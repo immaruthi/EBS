@@ -5,14 +5,8 @@ node
      checkout([$class: 'GitSCM', branches: [[name: '*/stagging']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '182d991f-95d3-4946-a822-79b4bc362381', url: 'https://github.com/immaruthi/EBS.git']]])
     stage('Restor Nuget')
      bat '"C:\\Program Files (x86)\\Nuget_Restore\\nuget.exe" restore OpenHouseAPI\\OpenHouseAPI.sln'
-     stage('SonarQube Integration Step 1')
-    powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"'
-    stage('SonarQube Integration Step 2')
-    bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe begin /k:"sample2" /n:"sample2" /v:"1.0" /d:sonar.verbose=true'
-    stage('SonarQube Integration Step 3')
-    bat 'dotnet build'
-    stage('SonarQube Integration Step 4')
-    bat 'D:\\Softwares\\sonar-build_4.6\\SonarScanner.MSBuild.exe end'
+     stage('SonarQube Integration')
+    powershell 'set-location -path "C:\\\\Program Files (x86)\\\\Jenkins\\\\workspace\\\\PPLTestApp\\\\OpenHouseAPI";D:\\\\Softwares\\\\sonar-build_4.6\\\\SonarScanner.MSBuild.exe begin /k:"sample2" /n:"sample2" /v:"1.0" /d:sonar.verbose=true;dotnet build;D:\\\\Softwares\\\\sonar-build_4.6\\\\SonarScanner.MSBuild.exe end'
     stage('Build and Prepare Artifacts')
     powershell 'set-location -path "C:\\Program Files (x86)\\Jenkins\\workspace\\PPLTestApp\\OpenHouseAPI"; dotnet build --configuration Debug;dotnet build --configuration Release;dotnet msbuild /p:Configuration=Debug /p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation=D:\\EBS\\Artifacts\\Output2.0.0.1.zip'
     stage('unit test')
